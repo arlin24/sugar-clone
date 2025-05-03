@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candy Crush-Like Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="screen">
+        <img src="https://imgur.com/a/HqNduXr" alt="Splash Screen">
+        <button onclick="showMainMenu()">Start</button>
+    </div>
+
+    <!-- Main Menu -->
+    <div id="main-menu" class="screen" style="display:none;">
+        <img src="https://imgur.com/a/9qXd3Ou" alt="Main Menu">
+        <button onclick="startGame()">Play</button>
+        <button onclick="goToSettings()">Settings</button>
+        <button onclick="earnCoins()">Get Coins</button>
+    </div>
+
+    <!-- Level Selection -->
+    <div id="level-selection" class="screen" style="display:none;">
+        <img src="https://imgur.com/a/zCVG70y" alt="Level Selection">
+        <!-- Dynamically add levels and stars here -->
+    </div>
+
+    <!-- Game Screen -->
+    <div id="game-screen" class="screen" style="display:none;">
+        <img src="https://imgur.com/a/6DcQWMk" alt="Game Screen">
+        <div class="controls">
+            <button onclick="pauseGame()">Pause</button>
+            <button onclick="moveLeft()">Go Left</button>
+            <button onclick="usePower()">Power</button>
+        </div>
+        <p>Score: <span id="score">0</span></p>
+        <p>Level: <span id="level">1</span></p>
+    </div>
+
+    <!-- Pause Menu -->
+    <div id="pause-menu" class="screen" style="display:none;">
+        <img src="https://imgur.com/a/jHOPAkp" alt="Pause Menu">
+        <button onclick="resumeGame()">Resume</button>
+        <button onclick="restartGame()">Restart</button>
+        <button onclick="goHome()">Home</button>
+    </div>
+
+    <!-- Level Complete -->
+    <div id="level-complete" class="screen" style="display:none;">
+        <img src="https://imgur.com/a/1fccvZW" alt="Level Complete">
+        <button onclick="restartLevel()">Restart</button>
+        <button onclick="proceedToNextLevel()">Proceed</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
